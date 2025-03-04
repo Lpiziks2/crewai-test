@@ -1,0 +1,16 @@
+# General Configuration
+app:
+  name: "Research Assistant"
+  version: "1.0.0"
+
+# EXA Search Configuration
+exa:
+  api_key: ${EXA_API_KEY}
+  content: true
+  summary: true
+  type: keyword
+
+# Crew Configuration
+crew:
+  verbose: true
+  process: "sequential"

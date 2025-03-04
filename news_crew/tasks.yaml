@@ -1,0 +1,58 @@
+# Search Task Configuration
+search_task:
+  agent: search_agent
+  description: >-
+    Use the EXASearchTool to find the most relevant and recent information on '{question}'.
+    Search guidelines:
+    1. Timeframe: Use 'start_published_date': '${THIRTY_DAYS_AGO}' for recent results
+    2. Source diversity: Include various reputable sources
+    3. Relevance: Focus on content directly addressing the query
+    4. Perspective: Gather multiple viewpoints
+    5. Depth: Include both overview and detailed analysis
+  expected_output: >-
+    Comprehensive search results including:
+    - Full source URLs and publication dates
+    - Complete article text or detailed summaries
+    - Expert quotes and key insights
+    - Source credibility assessment
+    - Relevant statistics and factual data
+
+# Report Task Configuration
+report_task:
+  agent: report_agent
+  description: >-
+    Create a professional news report on '{question}' structured as follows:
+
+    1. Title and summary
+       - Clear, descriptive title
+       - Comprehensive summary (200-300 words) of key developments
+
+    2. Key events and analysis (5-7 major developments)
+       For each event include:
+       - Descriptive title
+       - Date of occurrence
+       - Detailed explanation (200-300 words)
+       - Source attribution
+       - Analysis covering:
+         * Event significance within broader context
+         * Expert opinions and relevant data
+         * Historical context where applicable
+         * Clear source attribution
+
+    3. Implications and future outlook
+       - Short and long-term implications
+       - Potential future developments based on current trends
+       - Expert predictions where available
+
+    4. Sources
+       - Formatted reference list with publication names, dates, and URLs
+
+    Maintain professional journalistic tone, ensure factual accuracy, and make content
+    accessible to a general audience.
+  expected_output: >-
+    Professional news report containing:
+    - Title and detailed summary
+    - 5-7 key events with titles, dates, descriptions, and analysis
+    - Implications and future outlook section
+    - Properly formatted reference list
+    - Clear, engaging, fact-based content throughout
